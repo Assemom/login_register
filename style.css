@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg , #71b7e6 , #9b59);
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+} 
+
+.container header {
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+}
+.container header::before{
+    content: '';
+    bottom: 0;
+    position: absolute;
+    height: 3px;
+    width: 180px;
+    background-color: #9b59;   
+}
+.login-header{
+    text-align: center;
+}
+.container .login-header::before{
+    width: 111px;
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+.form .input_box {
+    width: 100%;
+    margin-top: 20 px;
+}
+
+.input_box label {
+    color: #333;
+    padding-top: 10px;
+}
+.input_box input:focus{
+    box-shadow: 0 1px 0 #9b59;
+}
+
+.form :where(.input_box input, .select_box) {
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    margin-top: 8px;
+    outline: none;
+    color: #707070;
+    font-size: 1rem;
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form :where(.gender_option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.form .gender_box {
+    margin-top: 20px;
+}
+
+.gender_box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.gender_box label{
+    color: #707070;
+}
+.form .gender {
+    column-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.gender input {
+    accent-color: #9b59;
+}
+.postal{
+    margin-top: 15px;
+}
+
+.form :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+
+.address :where(.input, .select_box) {
+    margin-top: 15px;
+}
+
+.select_box select {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+
+form .input_box .mybtn {
+    height: 55px;
+    width: 100%;
+    background:linear-gradient(135deg , #71b7e6 , #9b59);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 400;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form .input_box .mybtn:hover {
+    background-color: rgb(88, 56, 250);
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+}
